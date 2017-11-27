@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SiGas.Views.Gasto"
+            Title="Gastos">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="add.png" Command="{Binding IncluirCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <!-- lista mostrando os agendas cadastradas -->
+        <ListView ItemsSource="{Binding gasto}" 
+                HasUnevenRows="true" ItemTapped="Agenda_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Descrição: " FontAttributes="Bold" FontSize="18"
+                                TextColor="Black" VerticalOptions="End" />
+                                <Label Text="{Binding Gas_Descricao}" FontAttributes="Bold" FontSize="18"
+                                TextColor="Black" VerticalOptions="End" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Valor: " FontAttributes="Bold" FontSize="18"
+                                TextColor="Black" VerticalOptions="End" />
+                                <Label Text="{Binding Gas_Valor}" FontAttributes="Bold" FontSize="18"
+                                TextColor="Black" VerticalOptions="End" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Data: " FontAttributes="Bold" FontSize="18"
+                                TextColor="Black" VerticalOptions="End" />
+                                <Label Text="{Binding Gas_DataHora}" FontAttributes="Bold" FontSize="18"
+                                TextColor="Black" VerticalOptions="End" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

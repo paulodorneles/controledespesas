@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SiGas.Views.GastoAdd"
+             Title="Gastos">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="delete.png" Command="{Binding DeleteCommand}" />
+        <ToolbarItem Icon="check.png" Command="{Binding OkCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Descrição" FontSize="Medium" />
+            <Entry Text="{Binding Descricao}" FontSize="Medium" x:Name="txtDescricao"/>
+            <Label Text="Data" FontSize="Medium" />
+            <Entry Text="{Binding DataHora}" FontSize="Medium" x:Name="txtData"/>
+            <Label Text="Valor" FontSize="Medium" />
+            <Entry Text="{Binding Valor}" FontSize="Medium" x:Name="txtValor"/>
+            <Label Text="Tipo Gasto" FontSize="Medium" />            
+            
+            <StackLayout Orientation="Horizontal">
+                <Entry	Placeholder="Cod." x:Name="txtCodTipoGasto" Text="{Binding TigCodigo}" />
+                <Entry	Placeholder="Tipo Gasto" x:Name="txtDescricaoTipoGasto" Text="{Binding TigDescricao}"/>
+                <Button x:Name="getWeatherBtn" Text="Buscar" WidthRequest="185" BorderWidth="1" Clicked="BtnBuscar_Clicked">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{05e9ee26-ec86-4b78-9ba9-b5fc36872f38}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SiGas</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BDLocal\ConexaoBD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BDLocal\GastoBD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BDLocal\TipoGastoBD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BDLocal\UsuariosBD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDeviceSpecific.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ISQLiteConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GastoModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TipoGastoModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GastoAddViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GastoViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ListarTipoGastoViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaginaInicialViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TipoGastoAddViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TipoGastoViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Gasto.xaml.cs">
+      <DependentUpon>Gasto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\GastoAdd.xaml.cs">
+      <DependentUpon>GastoAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ListarTipoGasto.xaml.cs">
+      <DependentUpon>ListarTipoGasto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MasterDetailPrincipal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PaginaInicial.xaml.cs">
+      <DependentUpon>PaginaInicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TipoGasto.xaml.cs">
+      <DependentUpon>TipoGasto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TipoGastoAdd.xaml.cs">
+      <DependentUpon>TipoGastoAdd.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)JSON\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PaginaInicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TipoGasto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TipoGastoAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Gasto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\GastoAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ListarTipoGasto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
